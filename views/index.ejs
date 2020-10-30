@@ -10,8 +10,14 @@
     <ul>
       <% todos.forEach(function(t) { %>
       <li>
-        <h4><%= t.todo %> - <%= t.done ? 'Done' : 'Not done' %></h4>
-        <form action="/<%= t.id %>?_method=DELETE" method="POST">
+        <h3 class="delete-form">
+          <%= t.todo %> - <%= t.done ? 'Done' : 'Not done' %>
+        </h3>
+        <form
+          action="/<%= t.id %>?_method=DELETE"
+          method="POST"
+          class="delete-form"
+        >
           <button type="submit">Delete</button>
         </form>
       </li>
